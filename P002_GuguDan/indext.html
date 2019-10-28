@@ -1,0 +1,51 @@
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <title>구구단</title>
+            <script src="https://unpkg.com/react@16/umd/react.development.js"></script><!--react 실제 배포시 development->production으로 변경 -->
+            <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script><!--reactDOM 실제 배포시 development->production으로 변경-->
+            <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script><!--최신 문법과 실험적인 문법들을 자바스크립트에서 쓸 수 있게 해줌-->
+        </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script type="text/babel">
+           
+            class GuGudan extends React.Component{
+                constructor(props){
+                    super(props); 
+
+                    //바뀌는 것들...
+                    this.state = {
+                       first : Math.ceil(Math.random()*9),
+                       second : Math.ceil(Math.random()*9),
+                       value: '',
+                       result: '',
+                    };
+                } 
+
+                render(){
+                        return (
+                                <div>
+                                    <div>{this.state.first}곱하기 {this.state.second}는?</div>
+                                    <form>
+                                        <input type="number" value={this.state.value} onChange={(e)=>this.setState({value: e.target.value})}/> 
+                                                                                     
+                                        <button>입력!</button>
+                                    </form>
+                                    <div>{this.state.result}</div>
+                                </div>
+                               ); 
+                        }
+
+            }
+        </script>
+        <script type="text/babel">
+            //ReactDOM.render(e(LikeButton),document.querySelector('#root')); 
+            ReactDOM.render(<div><GuGudan /></div>,document.querySelector('#root')); 
+                            // /> 컴포넌트 닫을 때 반드시 닫아줘야 한다.
+        </script>
+    </body>
+
+</html>
