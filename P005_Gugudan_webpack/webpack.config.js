@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
 
-    name:'word-relay-setting', 
+    name:'word-relay-setting',  //안 써도 된다. 
     mode: 'development' ,  //실서비스 production 
     devtool: 'eval',       //빠르게 하겠다..? 
     resolve: {
@@ -13,7 +13,7 @@ module.exports = {
     //입력
     entry:{
         //app:['./client.jsx','./WordRelay.jsx']
-        app:['./GuGuDan'] 
+        app:['./client'] 
                     //▲resolve에서 확장자를 지정해 줬기 떄문에 파일 확장자도 입력 안함. 
     }, 
 

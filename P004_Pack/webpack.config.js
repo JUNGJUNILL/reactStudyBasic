@@ -2,9 +2,9 @@ const path = require('path');
 
 module.exports = {
 
-    name:'word-relay-setting', 
+    name:'word-relay-setting',  //안 써도 된다. 
     mode: 'development' ,  //실서비스 production 
-    devtool: 'eval',       //빠르게 하겠다..? 
+    devtool: 'eval',       //빠르게 하겠다..? ,개발용 eval, 실서비스 hidden-source-map
     resolve: {
         extensions: ['.js','.jsx']
     },
