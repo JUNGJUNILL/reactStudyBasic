@@ -14,7 +14,7 @@ module.exports = {
     entry:{
         //app:['./client.jsx','./WordRelay.jsx']
         app:['./client'] // client.jsx에서 ./WordRelay.jsx를 require하고 있으므로 client.jsx만 입력 해 주면 된다.  
-
+                    //▲resolve에서 확장자를 지정해 줬기 떄문에 파일 확장자도 입력 안함. 
     }, 
 
     module:{
