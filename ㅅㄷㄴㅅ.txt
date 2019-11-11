@@ -1,1 +1,1 @@
-sdf
+"name": "p006_wordrelay",
