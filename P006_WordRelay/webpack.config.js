@@ -51,6 +51,8 @@ module.exports = {
     output : {  
         path: path.join(__dirname,'dist'), 
         filename : 'app.js',
+        publicPath: '/dist/', //hot-loader쓰면 dist/app.js 안먹어서... 이 옵션 달아 줌 
+                              //node의 app.use('/dist',express.static(__dirname,'dist'))와 유사하다. 
     }
 
 }
